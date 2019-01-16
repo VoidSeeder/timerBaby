@@ -20,10 +20,10 @@ void Teclado::iniciar(){
 }
 
 char Teclado::lerTecla(){
-    for(int i_cont_linha; i_cont_linha < 4; i_cont_linha++){
+    for(int i_cont_linha = 0; i_cont_linha < 4; i_cont_linha++){
         digitalWrite(this->ui8_linhas[i_cont_linha], HIGH);
 
-        for(int i_cont_coluna; i_cont_coluna < 4; i_cont_coluna++){
+        for(int i_cont_coluna = 0; i_cont_coluna < 3; i_cont_coluna++){
             if(digitalRead(this->ui8_colunas[i_cont_coluna])){
                 digitalWrite(this->ui8_linhas[i_cont_linha], LOW);
 
